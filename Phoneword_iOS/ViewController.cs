@@ -17,43 +17,49 @@ namespace Phoneword_iOS
             string translatedNumber = "";
 
             TranslateButton.TouchUpInside += (object sender, EventArgs e) => {
-                // Convert the phone number with text to a number
                 translatedNumber = PhoneTranslator.ToNumber(PhoneNumberText.Text);
-
-                // Dismiss the keyboard if text field was tapped
-                PhoneNumberText.ResignFirstResponder();
-
+                DismissKeyboard();
                 if (translatedNumber == "")
                 {
-                    CallButton.SetTitle("Call ", UIControlState.Normal);
+                    CallButton.SetTitle("Call", UIControlState.Normal);
                     CallButton.Enabled = false;
                 }
                 else
                 {
-                    CallButton.SetTitle("Call " + translatedNumber,
-                        UIControlState.Normal);
+                    CallButton.SetTitle("Call " + translatedNumber, UIControlState.Normal);
                     CallButton.Enabled = true;
                 }
             };
 
             CallButton.TouchUpInside += (object sender, EventArgs e) => {
-                // Use URL handler with tel: prefix to invoke Apple's Phone app...
-                var url = new NSUrl("tel:" + translatedNumber);
-
-                // ...otherwise show an alert dialog
+                var url = PhoneAppUrl(translatedNumber);
                 if (!UIApplication.SharedApplication.OpenUrl(url))
                 {
-                    var alert = UIAlertController.Create("Not supported", "Scheme 'tel:' is not supported on this device", UIAlertControllerStyle.Alert);
-                    alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+                    var alert = PhoneNotSupported();
                     PresentViewController(alert, true, null);
                 }
             };
         }
 
-        public override void DidReceiveMemoryWarning()
+        void DismissKeyboard()
         {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
+            PhoneNumberText.ResignFirstResponder();
+        }
+
+        NSUrl PhoneAppUrl(string translatedNumber)
+        {
+            return new NSUrl("tel:" + translatedNumber);
+        }
+
+        UIAlertController PhoneNotSupported()
+        {
+            UIAlertController alert = UIAlertController.Create(
+                "Not supported", 
+                "Scheme 'tel:' is not supported on this device", 
+                UIAlertControllerStyle.Alert
+            );
+            alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+            return alert;
         }
     }
 }
