@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+self_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
+base_dir="$(dirname "$self_dir")"
+nunit_runner="${base_dir}/packages/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe"
+
+test_assembly="${base_dir}/PhoneWorld_iOS.UnitTest/bin/Debug/PhoneWorld_iOS.UnitTest.dll"
+mono "$nunit_runner" "$test_assembly" "$@"
+
