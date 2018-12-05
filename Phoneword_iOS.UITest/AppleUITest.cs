@@ -1,11 +1,9 @@
-﻿
-using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
-namespace Phoneword_iOS.Test
+namespace Phoneword_iOS.UITest
 {
     [TestFixture]
-    public class TranslatorTest
+    public class AppleUITest
     {
         [Test]
         public void Pass()
