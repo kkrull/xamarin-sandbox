@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoneword_iOS", "Phoneword_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoneword_iOS.UITest", "Phoneword_iOS.UITest\Phoneword_iOS.UITest.csproj", "{B174D766-4051-47A4-943F-4EDA7282C20C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneWorld_iOS.UnitTest", "PhoneWorld_iOS.UnitTest\PhoneWorld_iOS.UnitTest.csproj", "{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -29,5 +31,13 @@ Global
 		{B174D766-4051-47A4-943F-4EDA7282C20C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{B174D766-4051-47A4-943F-4EDA7282C20C}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{B174D766-4051-47A4-943F-4EDA7282C20C}.Debug|iPhone.Build.0 = Debug|iPhone
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Release|iPhone.Build.0 = Release|Any CPU
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{891FDF73-F815-4DC3-9ADE-68FEF531B8C5}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
