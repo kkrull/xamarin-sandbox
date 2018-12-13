@@ -6,6 +6,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace Cuneiform.Droid
 {
+  // ReSharper disable once UnusedMember.Global
   [Activity(
     ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
     Icon = "@drawable/icon",
@@ -20,7 +21,6 @@ namespace Cuneiform.Droid
       ToolbarResource = Resource.Layout.Toolbar;
 
       base.OnCreate(bundle);
-      
       Forms.Init(this, bundle);
       LoadApplication(new App());
     }
