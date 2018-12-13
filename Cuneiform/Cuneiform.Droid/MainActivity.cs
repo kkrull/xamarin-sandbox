@@ -9,8 +9,12 @@ using Android.OS;
 
 namespace Cuneiform.Droid
 {
-  [Activity(Label = "Cuneiform.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true,
-    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+  [Activity(
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+    Icon = "@drawable/icon",
+    Label = "Cuneiform.Droid",
+    MainLauncher = true,
+    Theme = "@style/MyTheme")]
   public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
   {
     protected override void OnCreate(Bundle bundle)

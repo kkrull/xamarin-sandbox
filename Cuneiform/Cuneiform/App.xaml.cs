@@ -7,7 +7,6 @@ namespace Cuneiform
     public App()
     {
       InitializeComponent();
-
       MainPage = new CuneiformPage();
     }
 
