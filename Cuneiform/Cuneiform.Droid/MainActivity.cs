@@ -1,11 +1,8 @@
-﻿using System;
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
 namespace Cuneiform.Droid
 {
@@ -15,7 +12,7 @@ namespace Cuneiform.Droid
     Label = "Cuneiform.Droid",
     MainLauncher = true,
     Theme = "@style/MyTheme")]
-  public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+  public class MainActivity : FormsAppCompatActivity
   {
     protected override void OnCreate(Bundle bundle)
     {
@@ -23,9 +20,8 @@ namespace Cuneiform.Droid
       ToolbarResource = Resource.Layout.Toolbar;
 
       base.OnCreate(bundle);
-
-      global::Xamarin.Forms.Forms.Init(this, bundle);
-
+      
+      Forms.Init(this, bundle);
       LoadApplication(new App());
     }
   }
