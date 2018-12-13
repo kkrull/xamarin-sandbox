@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Android Default" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+    <option name="PROJECT_PATH" value="$PROJECT_DIR$/Cuneiform.Droid/Cuneiform.Droid.csproj" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+    <option name="DEPLOY_TARGET_BEHAVIOUR_NAME" value="Emulator" />
+    <option name="DEFAULT_EMULATOR_TO_RUN" value="" />
+    <option name="DEFAULT_DEVICE_TO_RUN" value="nexus_5_lollipop" />
+    <method v="2">
+      <option name="Build" enabled="true" />
+    </method>
+  </configuration>
+</component>
