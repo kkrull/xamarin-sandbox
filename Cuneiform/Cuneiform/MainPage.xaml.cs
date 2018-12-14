@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace Cuneiform
 {
@@ -7,6 +8,11 @@ namespace Cuneiform
     public MainPage()
     {
       InitializeComponent();
+    }
+
+    private void OnAcknowledgement(object sender, EventArgs e)
+    {
+      ((Button) sender).Text = $"You clicked a button! Go you.";
     }
   }
 }

@@ -9,5 +9,8 @@
             HorizontalOptions="Center"
             Text="Welcome to Xamarin.Forms!"
             VerticalOptions="CenterAndExpand" />
+        <Button
+            Clicked="OnAcknowledgement"
+            Text="Uh.. ok" />
     </StackLayout>
 </ContentPage>
