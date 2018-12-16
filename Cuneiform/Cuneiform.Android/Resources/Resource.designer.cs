@@ -26,6 +26,10 @@ namespace Cuneiform.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLCrypto.Resource.String.ApplicationName = global::Cuneiform.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::Cuneiform.Droid.Resource.String.Hello;
+			global::PCLStorage.Resource.String.ApplicationName = global::Cuneiform.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::Cuneiform.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Cuneiform.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -3961,6 +3965,12 @@ namespace Cuneiform.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f0a003d
+			public const int ApplicationName = 2131361853;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int Hello = 2131361852;
 			
 			// aapt resource value: 0x7f0a0015
 			public const int abc_action_bar_home_description = 2131361813;

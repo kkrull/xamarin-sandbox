@@ -1,18 +1,16 @@
-﻿using System;
+﻿using Amazon.CognitoIdentityProvider;
 using Xamarin.Forms;
 
 namespace Cuneiform
 {
   public partial class MainPage : ContentPage
   {
-    public MainPage()
-    {
-      InitializeComponent();
-    }
+    private readonly AmazonCognitoIdentityProviderConfig _idpConfig;
 
-    private void OnAcknowledgement(object sender, EventArgs e)
+    public MainPage(AmazonCognitoIdentityProviderConfig idpConfig)
     {
-      ((Button) sender).Text = $"You clicked a button! Go you.";
+      _idpConfig = idpConfig;
+      InitializeComponent();
     }
   }
 }

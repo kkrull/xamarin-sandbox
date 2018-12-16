@@ -1,4 +1,8 @@
-﻿using Foundation;
+﻿using System.Net.Http;
+using Amazon;
+using Amazon.CognitoIdentityProvider;
+using Amazon.Runtime;
+using Foundation;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -12,8 +16,23 @@ namespace Cuneiform.iOS
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
       Forms.Init();
-      LoadApplication(new App());
+
+      var application = new App(new AmazonCognitoIdentityProviderConfig
+      {
+        HttpClientFactory = new IOSClientFactory(), 
+        RegionEndpoint = RegionEndpoint.USEast1
+      });
+      
+      LoadApplication(application);
       return base.FinishedLaunching(app, options);
+    }
+  }
+  
+  public class IOSClientFactory : IHttpClientFactory
+  {
+    public HttpClient CreateHttpClient(IClientConfig clientConfig)
+    {
+      return new HttpClient();
     }
   }
 }

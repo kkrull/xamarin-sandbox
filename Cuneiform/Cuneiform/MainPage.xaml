@@ -1,16 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Cuneiform"
              x:Class="Cuneiform.MainPage">
     <StackLayout>
+        <StackLayout.BindingContext>
+            <local:LoginViewModel />
+        </StackLayout.BindingContext>
+
         <Label
             HorizontalOptions="Center"
-            Text="Welcome to Xamarin.Forms!"
+            Text="{Binding Message}"
             VerticalOptions="CenterAndExpand" />
+
+        <Entry
+            Placeholder="Enter Username"
+            Text="{Binding Username}" />
+
+        <Entry
+            Placeholder="Enter Password"
+            Text="{Binding Password}" />
+
         <Button
-            Clicked="OnAcknowledgement"
-            Text="Uh.. ok" />
+            Command="{Binding SignInCommand}"
+            Text="Sign In" />
     </StackLayout>
 </ContentPage>
