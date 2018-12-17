@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="iOS Default" type="XamarinIOSProject" factoryName="Xamarin.iOS">
+    <option name="PROJECT_PATH" value="$PROJECT_DIR$/Cuneiform.iOS/Cuneiform.iOS.csproj" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <option name="DEFAULT_IPHONE_DEVICE" value="" />
+    <option name="DEFAULT_IPHONE_SIMULATOR" value="iPhone 7 iOS 12.1" />
+    <option name="DEPLOY_TARGET_BEHAVIOUR_NAME" value="Simulator" />
+    <method v="2" />
+  </configuration>
+</component>
