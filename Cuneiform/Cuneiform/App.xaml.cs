@@ -8,10 +8,11 @@ namespace Cuneiform
 {
   public partial class App : Application
   {
-    public App(AmazonCognitoIdentityProviderConfig idpConfig)
+    public App(AmazonCognitoIdentityProviderConfig idpConfig, IConfigureCognito cognitoConfig)
     {
       InitializeComponent();
-      MainPage = new MainPage(idpConfig);
+      var viewModel = new LoginViewModel(idpConfig, cognitoConfig);
+      MainPage = new MainPage { BindingContext = viewModel };
     }
 
     protected override void OnStart()

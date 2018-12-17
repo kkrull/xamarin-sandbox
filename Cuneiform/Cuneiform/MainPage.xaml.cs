@@ -1,15 +1,11 @@
-﻿using Amazon.CognitoIdentityProvider;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Cuneiform
 {
   public partial class MainPage : ContentPage
   {
-    private readonly AmazonCognitoIdentityProviderConfig _idpConfig;
-
-    public MainPage(AmazonCognitoIdentityProviderConfig idpConfig)
+    public MainPage()
     {
-      _idpConfig = idpConfig;
       InitializeComponent();
     }
   }

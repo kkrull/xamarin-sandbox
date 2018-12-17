@@ -5,20 +5,27 @@
              xmlns:local="clr-namespace:Cuneiform"
              x:Class="Cuneiform.MainPage">
     <StackLayout>
-        <StackLayout.BindingContext>
-            <local:LoginViewModel />
-        </StackLayout.BindingContext>
-
         <Label
             HorizontalOptions="Center"
             Text="{Binding Message}"
             VerticalOptions="CenterAndExpand" />
+        
+        <Label
+            HorizontalOptions="Center"
+            Text="Access Token"
+            VerticalOptions="CenterAndExpand" />
+        
+        <Label
+            HorizontalOptions="Center"
+            Text="{Binding AccessTokenPrefix}"
+            VerticalOptions="CenterAndExpand"/>
 
         <Entry
             Placeholder="Enter Username"
             Text="{Binding Username}" />
 
         <Entry
+            IsPassword="true"
             Placeholder="Enter Password"
             Text="{Binding Password}" />
 

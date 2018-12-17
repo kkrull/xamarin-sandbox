@@ -4,6 +4,7 @@ using Amazon.Runtime;
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Cuneiform.Private;
 using System.Net.Http;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -28,12 +29,12 @@ namespace Cuneiform.Droid
       base.OnCreate(savedInstanceState);
       Forms.Init(this, savedInstanceState);
 
-      var application = new App(new AmazonCognitoIdentityProviderConfig
+      var idpConfig = new AmazonCognitoIdentityProviderConfig
       {
         HttpClientFactory = new AndroidClientFactory(), 
         RegionEndpoint = RegionEndpoint.USEast1
-      });
-      LoadApplication(application);
+      };
+      LoadApplication(new App(idpConfig, new StaticCognitoConfiguration()));
     }
   }
   

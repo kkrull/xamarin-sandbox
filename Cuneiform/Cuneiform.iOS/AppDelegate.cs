@@ -1,8 +1,9 @@
-﻿using System.Net.Http;
-using Amazon;
+﻿using Amazon;
 using Amazon.CognitoIdentityProvider;
 using Amazon.Runtime;
+using Cuneiform.Private;
 using Foundation;
+using System.Net.Http;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -17,13 +18,13 @@ namespace Cuneiform.iOS
     {
       Forms.Init();
 
-      var application = new App(new AmazonCognitoIdentityProviderConfig
+      var idpConfig = new AmazonCognitoIdentityProviderConfig
       {
         HttpClientFactory = new IOSClientFactory(), 
         RegionEndpoint = RegionEndpoint.USEast1
-      });
+      };
+      LoadApplication(new App(idpConfig, new StaticCognitoConfiguration()));
       
-      LoadApplication(application);
       return base.FinishedLaunching(app, options);
     }
   }
