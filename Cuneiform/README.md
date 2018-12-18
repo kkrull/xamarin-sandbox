@@ -10,6 +10,21 @@ But hang tight, folks, it's gonna be great.
 [xamarin-forms]: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
 
 
+## Configuration
+
+Cognito needs to be set up in the AWS console or otherwise, with a user pool and a client ID, in a region
+(assumed to be US East 1).  **The source file containing this information is intentionally left out of source control**,
+lest this information fall into the wrong hands.
+
+To fix this:
+
+1. Create a C# file `Cuneiform.Private.StaticCognitoCongiruation`.
+1. Implement `IConfigureCognito`.
+1. Fill in the values required by the interface.
+
+After that, you should be able to build.
+
+
 ## Build
 
 Build in Debug mode, targeting the iPhoneSimulator platform.
