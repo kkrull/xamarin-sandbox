@@ -1,9 +1,7 @@
 # Xamarin Cuneiform
 
-It's the earliest form of written [`Xamarin.Forms`][xamarin-forms] (according to me).
-
-Right now I can make about as much sense of it, as I can about actual [Cuneiform][cuneiform-og].
-But hang tight, folks, it's gonna be great.
+It's the earliest form of written [`Xamarin.Forms`][xamarin-forms], for the author - hence the comparison to the
+[earliest, known form of writing][cuneiform-og].
 
 
 [cuneiform-og]: https://en.wikipedia.org/wiki/Cuneiform
